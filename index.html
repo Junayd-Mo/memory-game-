@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="board">
+        <button id="play">PLAY</button>
+        <div class="loser" id="loser" style="display: none">
+          <p>GAME OVER.</p>
+          <!-- <p>YOU LOSE!</p> -->
+        </div>
+
+        <p id="round" class="round" style="display: block">Round</p>
+        <p class="round number" id="roundNumber" style="display: block">1</p>
+
+        <div
+          class="restartContainer"
+          id="restartContainer"
+          style="display: none"
+        >
+          <button class="restart" id="restart">Restart</button>
+          <p id="scoreMessage" class="score">You reached round:</p>
+          <p id="score" class="score">number</p>
+        </div>
+        <div id="grid" class="grid" style="display: none">
+          <button value="0" class="numbers zero" disabled>0</button>
+          <button value="1" class="numbers one" disabled>1</button>
+          <button value="2" class="numbers two" disabled>2</button>
+          <button value="3" class="numbers three" disabled>3</button>
+          <button value="4" class="numbers four" disabled>4</button>
+          <button value="5" class="numbers five" disabled>5</button>
+          <button value="6" class="numbers six" disabled>6</button>
+          <button value="7" class="numbers seven" disabled>7</button>
+          <button value="8" class="numbers eight" disabled>8</button>
+          <button value="9" class="numbers nine" disabled>9</button>
+          <button value="10" class="numbers ten" disabled>10</button>
+          <button value="11" class="numbers eleven" disabled>11</button>
+          <button value="12" class="numbers twelve" disabled>12</button>
+          <button value="13" class="numbers thirteen" disabled>13</button>
+          <button value="14" class="numbers fourteen" disabled>14</button>
+          <button value="15" class="numbers fifteen" disabled>15</button>
+          <button value="16" class="numbers sixteen" disabled>16</button>
+          <button value="17" class="numbers seventeen" disabled>17</button>
+          <button value="18" class="numbers eighteen" disabled>18</button>
+          <button value="19" class="numbers nineteen" disabled>19</button>
+          <button value="20" class="numbers twenty" disabled>20</button>
+          <button value="21" class="numbers twentyone" disabled>21</button>
+          <button value="22" class="numbers twentytwo" disabled>22</button>
+          <button value="23" class="numbers twentythree" disabled>23</button>
+          <button value="24" class="numbers twentyfour" disabled>24</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
