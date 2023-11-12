@@ -11,23 +11,25 @@
     <div class="container">
       <div class="board">
         <button id="play">PLAY</button>
-        <div class="loser" id="loser" style="display: none">
-          <p>GAME OVER.</p>
+        <div class="loserDisplayPage">
+          <p class="loser" id="loser" style="display: none">GAME OVER.</p>
           <!-- <p>YOU LOSE!</p> -->
+          <div
+            class="restartContainer"
+            id="restartContainer"
+            style="display: none"
+          >
+            <button class="restart" id="restart">Restart</button>
+            <p id="scoreMessage" class="score">You reached round:</p>
+            <p id="score" class="score">number</p>
+          </div>
         </div>
 
-        <p id="round" class="round" style="display: block">Round</p>
-        <p class="round number" id="roundNumber" style="display: block">1</p>
-
-        <div
-          class="restartContainer"
-          id="restartContainer"
-          style="display: none"
-        >
-          <button class="restart" id="restart">Restart</button>
-          <p id="scoreMessage" class="score">You reached round:</p>
-          <p id="score" class="score">number</p>
+        <div class="roundContainer">
+          <p id="round" class="round" style="display: block">Round</p>
+          <p class="round number" id="roundNumber" style="display: block">1</p>
         </div>
+
         <div id="grid" class="grid" style="display: none">
           <button value="0" class="numbers zero" disabled>0</button>
           <button value="1" class="numbers one" disabled>1</button>
