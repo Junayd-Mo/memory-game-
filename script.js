@@ -17,6 +17,11 @@ for (let i = 0;i<=allNumbers.length-1;i++){
     allNumbers[i].disabled = false  
 }
 
+let sounds = ['key01','key02','key03','key04','key05','key06','key07','key08','key09','key10','key11',
+'key12','key13','key14','key15','key16','key17','key18','key19','key20','key21',
+'key22','key23','key24','key25']
+
+
 
 
 const getRandomNumber = () =>{
@@ -37,30 +42,30 @@ allNumbers.forEach(bt => {
         if (generatedValue[userSequence.length-1] === userSequence[userSequence.length-1]){
             if(generatedValue.length === userSequence.length){
                 if (strGenerated == strUser){
+                    let audio = new Audio('../sounds/key01.mp3')
+                    audio. playbackRate = 3.5
+                    audio.play()
                     generatedValue = []
                     generatedPattern.push(getRandomNumber())
                     generatedPattern.forEach (bt => {
                         generatedValue.push(bt.innerHTML)
+
                     })
+
                     userSequence = []
                     round += 1
                     roundNumber.textContent = round
-                    
-
                     startFlashing()
-                    console.log(userSequence)
-                    console.log(strUser)
-                    console.log(round)
                 }
             }
+            let audio = new Audio('../sounds/key01.mp3')
+            audio. playbackRate = 3.5
+            audio.play()
+            
             }else{
+                let audio = new Audio('../sounds/wrong.mp3')
+                audio.play()
                 generatedPattern = [getRandomNumber()]
-
-                console.log(userSequence)
-                console.log(strUser)
-                console.log('generatedValue is : ' + generatedValue)
-                console.log('generatedPattern is : '+generatedPattern)
-                console.log('strGenerated is: '+ strGenerated)
                 generatedValue = []
                 generatedPattern.forEach (bt => {
                     generatedValue.push(bt.innerHTML)
@@ -82,9 +87,6 @@ allNumbers.forEach(bt => {
                 score.textContent = endOfRound
                 Round.style.display = 'none'
                 roundNumber.style.display = 'none'
-
-
-
             }   
     })
 })
@@ -93,6 +95,13 @@ allNumbers.forEach(bt => {
     const flash = numbers => {
         return new Promise(resolve => {
             numbers.className += ' active';
+            // add sound 
+            let audio = new Audio('../sounds/key01.mp3')
+            audio. playbackRate = 3.5
+            audio.play()
+
+
+
             setTimeout(() => {
                 numbers.className = numbers.className.replace(
                     ' active', ''
@@ -112,19 +121,15 @@ allNumbers.forEach(bt => {
         restartContainer.style.display ='none'
         loser.style.display='none'
 
-
         setTimeout(async () =>{
 
-
-    
-    
             canClick = false
             for (const numbers of generatedPattern){
                 await flash(numbers)
                 }
                 canCLick = true
             
-        },750)
+        },1000)
 
         }
 startBtn.addEventListener('click',startFlashing)
