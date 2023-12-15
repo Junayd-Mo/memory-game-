@@ -92,9 +92,10 @@ body{
     border: solid black;
     /* position: relative;
     left: 200px; */
+}
 
-
-    
+.score{
+    margin: 10px;
 }
 
 #restartContainer p {
