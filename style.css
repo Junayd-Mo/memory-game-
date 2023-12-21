@@ -77,6 +77,9 @@ body {
   top: -106px;
 }
 
+.number:focus {
+  background-color: red;
+}
 .restart {
   width: 200px;
   height: 100px;
